@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { LauncherService } from './game/services/launcher.service';
 
 @Component({
   selector: 'app-root',
@@ -9,9 +10,9 @@ import { BehaviorSubject } from 'rxjs';
 export class AppComponent {
   title = 'phaser-test';
 
-  newGameCount: BehaviorSubject<number> = new BehaviorSubject(0);
+  constructor(private launcherService: LauncherService) {}
 
   launchNewGame() {
-    this.newGameCount.next(1);
+    this.launcherService.launchNewGame();
   }
 }
