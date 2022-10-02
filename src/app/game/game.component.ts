@@ -3,6 +3,7 @@ import { MainScene } from './scenes/main-scene';
 import Phaser from 'phaser';
 import { Subscription } from 'rxjs';
 import { LauncherService } from './services/launcher.service';
+import { GameOverScene } from './scenes/game-over-scene';
 
 @Component({
   selector: 'app-game',
@@ -16,6 +17,7 @@ export class GameComponent implements OnInit, OnDestroy {
   cursors: any;
 
   private gameSub: Subscription = new Subscription();
+  private sceneSub: Subscription = new Subscription();
 
   constructor(private launcherService: LauncherService) {}
 
@@ -26,11 +28,18 @@ export class GameComponent implements OnInit, OnDestroy {
         this.launchNewGame();
       }
     });
+    this.sceneSub = this.launcherService.getNextScene().subscribe((res) => {
+      if (res) {
+      }
+    });
   }
 
   ngOnDestroy() {
     if (this.gameSub) {
       this.gameSub.unsubscribe();
+    }
+    if (this.sceneSub) {
+      this.sceneSub.unsubscribe();
     }
   }
 

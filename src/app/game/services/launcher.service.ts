@@ -14,4 +14,14 @@ export class LauncherService {
   getLauncher() {
     return this.$newGame;
   }
+
+  public $nextScene: BehaviorSubject<string> = new BehaviorSubject('');
+
+  setNextScene(sceneName: string) {
+    return this.$nextScene.next(sceneName);
+  }
+
+  getNextScene() {
+    return this.$nextScene;
+  }
 }
