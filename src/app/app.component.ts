@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
-import { LauncherService } from './game/services/launcher.service';
+import { LauncherService } from './services/launcher.service';
 
 @Component({
   selector: 'app-root',

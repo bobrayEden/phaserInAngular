@@ -1,4 +1,4 @@
-import { LauncherService } from '../services/launcher.service';
+import { LauncherService } from '../../services/launcher.service';
 
 export class MainScene extends Phaser.Scene {
   constructor(private launcherService: LauncherService) {
