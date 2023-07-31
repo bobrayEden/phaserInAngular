@@ -1,17 +1,17 @@
-import { Component } from '@angular/core';
-import { LauncherService } from './services/launcher.service';
+import { Component } from '@angular/core'
+import { LauncherService } from './services/launcher.service'
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'phaser-test';
+    title = 'phaser-test'
 
-  constructor(private launcherService: LauncherService) {}
+    constructor(private launcherService: LauncherService) {}
 
-  launchNewGame() {
-    this.launcherService.launchNewGame();
-  }
+    launchNewGame() {
+        this.launcherService.launchNewGame()
+    }
 }

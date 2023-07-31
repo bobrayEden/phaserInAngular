@@ -1,27 +1,27 @@
-import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { Injectable } from '@angular/core'
+import { BehaviorSubject } from 'rxjs'
 
 @Injectable({
-  providedIn: 'root',
+    providedIn: 'root',
 })
 export class LauncherService {
-  public $newGame: BehaviorSubject<number> = new BehaviorSubject(0);
+    public $newGame: BehaviorSubject<number> = new BehaviorSubject(0)
 
-  launchNewGame() {
-    return this.$newGame.next(1);
-  }
+    launchNewGame() {
+        return this.$newGame.next(1)
+    }
 
-  getLauncher() {
-    return this.$newGame;
-  }
+    getLauncher() {
+        return this.$newGame
+    }
 
-  public $nextScene: BehaviorSubject<string> = new BehaviorSubject('');
+    public $nextScene: BehaviorSubject<string> = new BehaviorSubject('')
 
-  setNextScene(sceneName: string) {
-    return this.$nextScene.next(sceneName);
-  }
+    setNextScene(sceneName: string) {
+        return this.$nextScene.next(sceneName)
+    }
 
-  getNextScene() {
-    return this.$nextScene;
-  }
+    getNextScene() {
+        return this.$nextScene
+    }
 }
