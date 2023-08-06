@@ -9,11 +9,9 @@ class BaseScene extends Phaser.Scene {
     protected lineHeight: number
     protected fontOptions: any
 
-    // constructor(key, config) {
     constructor(key: string, config: any) {
         super(key)
-        const lol = new FlappyBirdConfig()
-        this.config = lol.getFlappyBirdConfig()
+        this.config = new FlappyBirdConfig().getFlappyBirdConfig()
         this.fontSize = 34
         this.lineHeight = 42
         this.fontOptions = { fontSize: `${this.fontSize}px`, fill: '#fff' }

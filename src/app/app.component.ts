@@ -7,11 +7,6 @@ import { Component } from '@angular/core'
 })
 export class AppComponent {
     title = 'phaser-test'
-    public config: any
 
     constructor() {}
-
-    launchNewGame($event: any) {
-        this.config = $event.value.config
-    }
 }

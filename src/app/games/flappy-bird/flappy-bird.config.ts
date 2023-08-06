@@ -1,4 +1,4 @@
-import { Config } from 'src/app/components/game/game.component.config'
+import { Config } from 'src/app/components/play/game/game.component.config'
 import MenuScene from './MenuScene'
 import PauseScene from './PauseScene'
 import PlayScene from './PlayScene'
