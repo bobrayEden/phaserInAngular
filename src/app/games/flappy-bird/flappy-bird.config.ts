@@ -1,3 +1,4 @@
+import { Config } from 'src/app/components/game/game.component.config'
 import MenuScene from './MenuScene'
 import PauseScene from './PauseScene'
 import PlayScene from './PlayScene'
@@ -58,3 +59,7 @@ export class FlappyBirdConfig {
     }
 }
 export default FlappyBirdConfig
+
+export const FLAPPYBIRD: Config = {
+    config: new FlappyBirdConfig().getFlappyBirdConfig(),
+}

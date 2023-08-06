@@ -1,6 +1,6 @@
 export class LogoScene extends Phaser.Scene {
     constructor() {
-        super({ key: 'logo' })
+        super({ key: 'LogoScene' })
     }
 
     preload() {
@@ -8,11 +8,8 @@ export class LogoScene extends Phaser.Scene {
     }
 
     create() {
-        console.log(this)
         this.add.image(0, 0, 'sky').setOrigin(0)
     }
 
-    override update() {
-        console.log('enter update')
-    }
+    override update() {}
 }

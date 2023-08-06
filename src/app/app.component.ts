@@ -1,5 +1,4 @@
 import { Component } from '@angular/core'
-import { LauncherService } from './services/launcher.service'
 
 @Component({
     selector: 'app-root',
@@ -8,10 +7,11 @@ import { LauncherService } from './services/launcher.service'
 })
 export class AppComponent {
     title = 'phaser-test'
+    public config: any
 
-    constructor(private launcherService: LauncherService) {}
+    constructor() {}
 
-    launchNewGame() {
-        this.launcherService.launchNewGame()
+    launchNewGame($event: any) {
+        this.config = $event.value.config
     }
 }

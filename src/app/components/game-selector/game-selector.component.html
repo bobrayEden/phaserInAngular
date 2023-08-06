@@ -1,9 +1,6 @@
-<select [(ngModel)]="selectedGame" (change)="lol($event)">
-    <option
-        *ngFor="let item of selectorContent"
-        [ngValue]="item"
-        [selected]="item.value === DEFAULT_CONFIG"
-    >
-        {{ item.name }}
-    </option>
-</select>
+<p-dropdown
+    [options]="selectorContent"
+    [(ngModel)]="selectedGame"
+    optionLabel="name"
+    (onChange)="loadNewGame()"
+></p-dropdown>
