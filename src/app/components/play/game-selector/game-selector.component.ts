@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core'
+import { Component, EventEmitter, Output } from '@angular/core'
 import { GAME_TITLES_DROPDOWN } from './game-selector.config'
 
 @Component({
